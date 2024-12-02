@@ -1,0 +1,77 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Melon Background Container */
+.melon-background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ff9a76, #ff6363); /* Watermelon colors */
+    overflow: hidden;
+    z-index: -1; /* Sends the background behind the content */
+}
+
+/* Floating Melon Slice */
+.melon-slice {
+    position: absolute;
+    width: 150px;
+    height: 75px;
+    background: radial-gradient(circle, #ff5656, #ff7878);
+    border-radius: 75px 75px 0 0;
+    border: 10px solid #42b72a; /* Melon rind color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: float 6s ease-in-out infinite;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Melon Seeds */
+.melon-seed {
+    position: absolute;
+    width: 15px;
+    height: 25px;
+    background: #2d2d2d;
+    border-radius: 50%;
+    animation: float 5s ease-in-out infinite;
+}
+
+/* Seed positions */
+.seed1 {
+    top: 60%;
+    left: 30%;
+    animation-duration: 4s;
+}
+
+.seed2 {
+    top: 40%;
+    left: 70%;
+    animation-duration: 6s;
+}
+
+.seed3 {
+    top: 75%;
+    left: 50%;
+    animation-duration: 8s;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
